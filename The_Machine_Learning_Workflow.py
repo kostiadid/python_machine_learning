@@ -12,9 +12,8 @@ y = cancer_df["target"]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=417)
 
-model = LinearSVC(penalty="l2", loss="hinge", C=10, random_state=417)
+model = LinearSVC(penalty="l2", loss="squared_hinge", C=10, max_iter=3500, random_state=417)
 model.fit(X_train, y_train)
-
 
 test_accuracy = model.score(X_test,y_test)
 print(test_accuracy)
