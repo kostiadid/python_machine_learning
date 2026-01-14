@@ -20,3 +20,5 @@ y_train = train_df["y"]
 
 X_test = test_df.drop(columns=["y"])
 y_test = test_df["y"]
+
+def knn(feature,single_test_input,k):
